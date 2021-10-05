@@ -1,0 +1,17 @@
+﻿using Streamish.Models;
+using System.Collections.Generic;
+
+namespace Streamish.Repositories
+{
+    public interface IVideoRepository
+    {
+        void Add(Video video);
+        void Delete(int id);
+        List<Video> GetAll();
+        List<Video> GetAllWithComments();
+        Video GetById(int id);
+        List<Video> Search(string criterion, bool sortDescending);
+        void Update(Video video);
+        //object Search(string q, bool sortDesc);
+    }
+}
